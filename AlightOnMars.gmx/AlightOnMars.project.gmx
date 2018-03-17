@@ -10,8 +10,16 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\drawCircleCloud.gml</script>
+    <script>scripts\clampLightLevels.gml</script>
+    <script>scripts\advanceClouds.gml</script>
+    <script>scripts\chanceSpawnCloud.gml</script>
+    <script>scripts\drawClouds.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\plainsObj</object>
+    <object>objects\cloud_controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
