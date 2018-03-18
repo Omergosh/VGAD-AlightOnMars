@@ -93,6 +93,13 @@ for (var j = 0; j &lt; tiles_h; ++j) {
   </views>
   <instances>
     <instance objName="cloud_controller" x="1056" y="0" name="inst_D420FE99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rover" x="416" y="256" name="inst_5123B344" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="736" y="320" name="inst_67485BBC" locked="0" code="" scaleX="5.16129016876221" scaleY="4.12903213500977" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="576" y="544" name="inst_1CB827C9" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="64" y="192" name="inst_3C7563C0" locked="0" code="" scaleX="6" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="224" y="640" name="inst_A373BEC5" locked="0" code="" scaleX="7" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="448" y="64" name="inst_435931D7" locked="0" code="" scaleX="12" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="896" y="512" name="inst_54E87260" locked="0" code="" scaleX="1" scaleY="6" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

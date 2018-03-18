@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\plains</sprite>
+    <sprite>sprites\spr_rock</sprite>
     <sprite>sprites\spr_rover</sprite>
   </sprites>
   <backgrounds name="background"/>
@@ -26,6 +27,7 @@
     <object>objects\plainsObj</object>
     <object>objects\cloud_controller</object>
     <object>objects\obj_rover</object>
+    <object>objects\obj_rock</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
