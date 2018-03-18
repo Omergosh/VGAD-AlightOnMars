@@ -161,7 +161,7 @@ tx = clamp(tx, 0, global.tw - 1);
 ty = clamp(tx, 0, global.th - 1);
 
 // Add to current solar power
-global.currentSolar += global.tiles[ty, tx].light_level / 5;
+global.currentSolar += 3 * global.tiles[ty, tx].light_level / 5;
 
 // Reset 
 self.sinceSolar = 0;

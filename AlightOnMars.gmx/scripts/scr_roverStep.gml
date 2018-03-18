@@ -4,7 +4,6 @@ Variable list...
 acceleration;
 maxSpeed = 10, currentSpeed = 3;
 maxTurnSpeed = 10, turnSpeed = 2;
-maxSolarPower = 1000, currentSolarPower = 0;
 */
 
 // Tracks if we're moving
@@ -75,11 +74,11 @@ if (motionLock && (currentSpeed != 0 || turnSpeed != 0)) {
 // Spend energy to move
 var toSpend;
 if (moving) {
-  toSpend = 1.5 * (speed / maxSpeed);
+  toSpend = 5*1.5 * (speed / maxSpeed);
 }
-// Spend less energey to stay still
+// Spend less energy to stay still
 else {
-  toSpend = .3;
+  toSpend = 3*.3;
 }
 
 // We can only spend down to 0
