@@ -117,6 +117,9 @@ if (self.sinceSolar &lt; global.maxTickSolar) {
 var tx = x div 32;
 var ty = y div 32;
 
+tx = clamp(tx, 0, global.tw - 1);
+ty = clamp(tx, 0, global.th - 1);
+
 // Add to current solar power
 global.currentSolar += global.tiles[ty, tx].light_level / 5;
 
