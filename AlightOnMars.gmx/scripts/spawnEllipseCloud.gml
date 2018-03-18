@@ -1,7 +1,5 @@
 ///spawnCloud()
 
-show_debug_message("Spawning ellipse");
-
 // Cloud range params
 
 var majRadiusMin = 5 * 32;

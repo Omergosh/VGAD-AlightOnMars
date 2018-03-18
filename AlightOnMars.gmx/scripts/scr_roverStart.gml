@@ -23,3 +23,6 @@ while(valid_rspawn == false){
 }
 x = rspawn_x;
 y = rspawn_y;
+
+// Solar power current tick count
+self.sinceSolar = 0;

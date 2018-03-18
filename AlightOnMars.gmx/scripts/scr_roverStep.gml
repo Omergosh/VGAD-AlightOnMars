@@ -7,6 +7,9 @@ maxTurnSpeed = 10, turnSpeed = 2;
 maxSolarPower = 1000, currentSolarPower = 0;
 */
 
+// Tracks if we're moving
+var moving = false;
+
 //Keyboard inputs
 //(motion lock)
 if(keyboard_check_pressed(vk_space)){
@@ -16,12 +19,15 @@ if(keyboard_check_pressed(vk_space)){
         motionLock = true;
     }
 }
+
 //(turning)
 if keyboard_check(vk_left){
     turnSpeed += 5;
+    moving = true;
 }
 if keyboard_check(vk_right){
     turnSpeed -= 5;
+    moving = true;
 }
 if(motionLock == false){
     if(keyboard_check(vk_left)==false and keyboard_check(vk_right)==false){
@@ -35,11 +41,14 @@ if(motionLock == false){
     }
 }
 turnSpeed = clamp(turnSpeed, -maxTurnSpeed, maxTurnSpeed);
+
 //(acceleration)
 if keyboard_check(vk_up){
     currentSpeed += acceleration;
+    moving = true;
 }else if keyboard_check(vk_down){
     currentSpeed -= acceleration;
+    moving = true;
 }else if(motionLock == false){
     if(currentSpeed>1){
         currentSpeed--;
@@ -51,21 +60,49 @@ if keyboard_check(vk_up){
 }
 currentSpeed = clamp(currentSpeed, -maxSpeed, maxSpeed);
 
+// Check if we're moving and motion lock is on
+if (motionLock && (currentSpeed != 0 || turnSpeed != 0)) {
+  moving = true;
+}
+
+// Spend energy to move
+var toSpend;
+if (moving) {
+  toSpend = 2 * (speed / maxSpeed);
+}
+// Spend less energey to stay still
+else {
+  toSpend = .5;
+}
+
+// We can only spend down to 0
+if (global.currentSolar - toSpend > 0)
+  global.currentSolar -= toSpend;
+else
+  global.currentSolar = 0;
+
 //Physics/changes
-direction += turnSpeed;
-speed = currentSpeed;
-image_angle = round(direction);
+// Remove control if we don't have power
+if (global.currentSolar > 0) {
+  direction += turnSpeed;
+  speed = currentSpeed;
+  image_angle = round(direction);
+}
+else {
+  speed = clamp(speed - acceleration, 0, maxSpeed);
+  image_angle = round(direction);
+}
 
 //Screen wrapping (manual)
-if(x - sprite_width > room_width){
-    x = -sprite_width;
-}else if(x + sprite_width < 0){
-    x = room_width + sprite_width;
+if(x  > room_width){
+    x = 0;
+}else if(x < 0){
+    x = room_width;
 }
-if(y - sprite_height > room_height){
-    y = -sprite_height;
-}else if(y + sprite_height < 0){
-    y = room_height + sprite_height;
+if(y > room_height){
+    y = 0;
+}else if(y < 0){
+    y = room_height;
 }
 
 //Helper functions

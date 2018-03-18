@@ -6,16 +6,16 @@ if (global.untilCloudSpawn > 0) {
   exit;
 }
 
-// The count of current clouds and our ideal count
+// The count of current clouds
 var count = ds_list_size(global.clouds);
-var idealCount = 10;
 
 // The threshold to randomly generate another one
-var threshold = (count / idealCount) - 0.05;
+var threshold = (count / global.maxClouds) - 0.05;
 
 if (random(1) >= threshold) {
   spawnCloud();
-  global.untilCloudSpawn = global.cloudSpawnDelay;
+  var cloudPercent = count / global.maxClouds;
+  global.untilCloudSpawn = global.cloudSpawnDelay * cloudPercent;
   show_debug_message("Randoming new cloud! Chance: " +
                      string(threshold) + ", clouds: " + string(count)); 
 }
