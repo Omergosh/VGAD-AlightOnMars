@@ -17,13 +17,10 @@
     <script>scripts\advanceClouds.gml</script>
     <script>scripts\chanceSpawnCloud.gml</script>
     <script>scripts\drawClouds.gml</script>
-<<<<<<< HEAD
     <script>scripts\scr_roverStep.gml</script>
     <script>scripts\scr_roverStart.gml</script>
-=======
     <script>scripts\array.gml</script>
     <script>scripts\resetLightLevels.gml</script>
->>>>>>> 66afbd3a41c749b3a35293ea3f9fd3c3b7dcb4ee
   </scripts>
   <objects name="objects">
     <object>objects\plainsObj</object>
