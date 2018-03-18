@@ -7,6 +7,8 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\plains</sprite>
+    <sprite>sprites\spr_rock</sprite>
+    <sprite>sprites\spr_rover</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -16,6 +18,8 @@
     <script>scripts\advanceClouds.gml</script>
     <script>scripts\chanceSpawnCloud.gml</script>
     <script>scripts\drawClouds.gml</script>
+    <script>scripts\scr_roverStep.gml</script>
+    <script>scripts\scr_roverStart.gml</script>
     <script>scripts\array.gml</script>
     <script>scripts\resetLightLevels.gml</script>
     <script>scripts\spawnCloud.gml</script>
@@ -24,6 +28,8 @@
   <objects name="objects">
     <object>objects\plainsObj</object>
     <object>objects\cloud_controller</object>
+    <object>objects\obj_rover</object>
+    <object>objects\obj_rock</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
