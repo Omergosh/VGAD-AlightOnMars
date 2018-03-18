@@ -1,7 +1,7 @@
 //How much the screen is covered with rocks, in terms of tiles filled by rocks.
 //A given value multiplied by 0.2, for example, would cover 20% of the screen
 spawn_area_offset = 1;
-rock_rate = 0.25;
+rock_rate = 0.15;
 
 //Number of tiles across and high for spawn area (centered around room center)
 tiles_across = (room_width/32) - (spawn_area_offset*2);
