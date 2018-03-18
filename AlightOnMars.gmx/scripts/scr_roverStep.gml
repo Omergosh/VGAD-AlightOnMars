@@ -68,11 +68,11 @@ if (motionLock && (currentSpeed != 0 || turnSpeed != 0)) {
 // Spend energy to move
 var toSpend;
 if (moving) {
-  toSpend = 2 * (speed / maxSpeed);
+  toSpend = 1.5 * (speed / maxSpeed);
 }
 // Spend less energey to stay still
 else {
-  toSpend = .5;
+  toSpend = .3;
 }
 
 // We can only spend down to 0
