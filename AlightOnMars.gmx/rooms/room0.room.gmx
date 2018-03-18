@@ -63,7 +63,7 @@ global.clouds = ds_list_create();
 // Start us with some clouds and tick them a few times to make the world seem
 // prepopulated
 var tickPerNew = 40;
-var toCreate = 5;
+var toCreate = 9;
 repeat (toCreate) {
   spawnCloud();
   repeat(tickPerNew) {
