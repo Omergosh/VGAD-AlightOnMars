@@ -46,6 +46,21 @@ global.th = tiles_h;
 // cloudTypeParams)
 global.clouds = ds_list_create();
 
+// Start us with some clouds and tick them a few times to make the world seem
+// prepopulated
+var tickPerNew = 40;
+var toCreate = 5;
+repeat (toCreate) {
+  spawnCloud();
+  repeat(tickPerNew) {
+    advanceClouds();
+  }
+}
+
+// Delay the next spawn
+global.cloudSpawnDelay = 100; // Amount to delay by
+global.untilCloudSpawn = global.cloudSpawnDelay; // Counter
+
 // Build tiles array
 for (var j = 0; j &lt; tiles_h; ++j) {
     for (var i = 0; i &lt; tiles_w; ++i) {
