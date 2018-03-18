@@ -9,11 +9,11 @@ darkness = argument3;
 // Naive circle drawing, it's actually square, but we check radius..
 for (var j = -radius; j  <= radius; j += 32) {
     yf = y0 + j;
-    if (yf < 0 || yf > room_height)
+    if (yf < 0 || yf >= room_height)
         continue;
     for (var i = -radius; i <= radius; i += 32) {
         xf = x0 + i;
-        if (xf < 0 || xf > room_width)
+        if (xf < 0 || xf >= room_width)
             continue;
         
         if (i * i + j * j > radius2)
