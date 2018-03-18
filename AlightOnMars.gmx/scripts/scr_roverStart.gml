@@ -9,3 +9,6 @@ turnFriction = 0.7;
 maxSolarPower = 1000;
 currentSolarPower = 0;
 motionLock = false;
+
+// Solar power current tick count
+self.sinceSolar = 0;

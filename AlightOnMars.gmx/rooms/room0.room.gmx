@@ -10,7 +10,10 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>// Light levels
+  <code>// Full random
+randomize();
+
+// Light levels
 global.min_light_level = 0;
 global.max_light_level = 100;
 global.default_light_level = 75;
@@ -68,9 +71,18 @@ repeat (toCreate) {
   }
 }
 
+// Set our max cloud count
+global.maxClouds = 20;
+
 // Delay the next spawn
 global.cloudSpawnDelay = 100; // Amount to delay by
-global.untilCloudSpawn = global.cloudSpawnDelay; // Counter
+var cloudPercent = toCreate / global.maxClouds;
+global.untilCloudSpawn = global.cloudSpawnDelay * cloudPercent; // Counter
+
+// Set solar power max, starting power and poll time
+global.maxSolar = 1000;
+global.currentSolar = 300;
+global.maxTickSolar = 10;
 
 // Build tiles array
 for (var j = 0; j &lt; tiles_h; ++j) {
@@ -126,6 +138,7 @@ for (var j = 0; j &lt; tiles_h; ++j) {
     <instance objName="obj_rock" x="224" y="640" name="inst_A373BEC5" locked="0" code="" scaleX="7" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="448" y="64" name="inst_435931D7" locked="0" code="" scaleX="12" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="896" y="512" name="inst_54E87260" locked="0" code="" scaleX="1" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="solar_controller" x="1024" y="0" name="inst_6781EEC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
