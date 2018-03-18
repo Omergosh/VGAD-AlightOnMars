@@ -24,6 +24,7 @@
     <script>scripts\resetLightLevels.gml</script>
     <script>scripts\spawnCloud.gml</script>
     <script>scripts\cleanupClouds.gml</script>
+    <script>scripts\spawnRocks.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\plainsObj</object>
