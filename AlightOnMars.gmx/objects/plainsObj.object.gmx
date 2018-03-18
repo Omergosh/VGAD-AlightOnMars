@@ -29,7 +29,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>75</string>
+            <string>global.default_light_level</string>
           </argument>
         </arguments>
       </action>
