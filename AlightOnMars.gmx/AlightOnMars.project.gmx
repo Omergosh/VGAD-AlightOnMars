@@ -18,6 +18,8 @@
     <script>scripts\drawClouds.gml</script>
     <script>scripts\array.gml</script>
     <script>scripts\resetLightLevels.gml</script>
+    <script>scripts\spawnCloud.gml</script>
+    <script>scripts\cleanupClouds.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\plainsObj</object>
