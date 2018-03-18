@@ -16,6 +16,8 @@
     <script>scripts\advanceClouds.gml</script>
     <script>scripts\chanceSpawnCloud.gml</script>
     <script>scripts\drawClouds.gml</script>
+    <script>scripts\array.gml</script>
+    <script>scripts\resetLightLevels.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\plainsObj</object>
