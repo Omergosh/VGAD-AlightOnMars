@@ -14,6 +14,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\drawCircleCloud.gml</script>
+    <script>scripts\drawEllipseCloud.gml</script>
     <script>scripts\clampLightLevels.gml</script>
     <script>scripts\advanceClouds.gml</script>
     <script>scripts\chanceSpawnCloud.gml</script>
@@ -22,9 +23,11 @@
     <script>scripts\scr_roverStart.gml</script>
     <script>scripts\array.gml</script>
     <script>scripts\resetLightLevels.gml</script>
-    <script>scripts\spawnCloud.gml</script>
+    <script>scripts\spawnCircleCloud.gml</script>
+    <script>scripts\spawnEllipseCloud.gml</script>
     <script>scripts\cleanupClouds.gml</script>
     <script>scripts\spawnRocks.gml</script>
+    <script>scripts\spawnCloud.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\plainsObj</object>

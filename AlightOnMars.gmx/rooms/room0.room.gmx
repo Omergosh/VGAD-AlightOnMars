@@ -17,7 +17,12 @@ global.default_light_level = 75;
 
 // Cloud types
 enum clouds {
-  circle
+  circle,
+  ellipse,
+  
+  // Don't add after this, this is used as a fencepost to randomly select from
+  // the previous types
+  end_cloud 
 };
 
 // Cloud array accessors
@@ -34,6 +39,12 @@ enum cloudA {
 // Circle cloud parameters accessors
 enum circleA {
   radius = 0
+};
+
+// Ellipse cloud parameters accessors
+enum ellipseA {
+  xradius = 0,
+  yradius = 1
 };
 
 // Game dimension info

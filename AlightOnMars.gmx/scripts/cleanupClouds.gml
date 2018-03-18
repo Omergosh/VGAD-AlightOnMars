@@ -24,6 +24,13 @@ for (var i = count - 1; i >= 0; --i) {
         ds_list_add(toDestroy, i);
       }
       break;
+    case clouds.ellipse:
+      var xrad = cp[ellipseA.xradius];
+      var yrad = cp[ellipseA.yradius];
+      if (cx + xrad < 0 || cx - xrad > room_width ||
+          cy + yrad < 0 || cy - yrad > room_height) {
+        ds_list_add(toDestroy, i);
+      }
   }
 }
 
