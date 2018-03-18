@@ -10,6 +10,9 @@ maxSolarPower = 1000, currentSolarPower = 0;
 // Tracks if we're moving
 var moving = false;
 
+//Animation
+image_index = 0;
+
 //Keyboard inputs
 //(motion lock)
 if(keyboard_check_pressed(vk_space)){
@@ -46,6 +49,8 @@ turnSpeed = clamp(turnSpeed, -maxTurnSpeed, maxTurnSpeed);
 if keyboard_check(vk_up){
     currentSpeed += acceleration;
     moving = true;
+    //Animation
+    image_index = 1;
 }else if keyboard_check(vk_down){
     currentSpeed -= acceleration;
     moving = true;
@@ -63,6 +68,8 @@ currentSpeed = clamp(currentSpeed, -maxSpeed, maxSpeed);
 // Check if we're moving and motion lock is on
 if (motionLock && (currentSpeed != 0 || turnSpeed != 0)) {
   moving = true;
+  //Animation
+  image_index = 2;
 }
 
 // Spend energy to move
@@ -91,6 +98,8 @@ if (global.currentSolar > 0) {
 else {
   speed = clamp(speed - acceleration, 0, maxSpeed);
   image_angle = round(direction);
+  //Animation
+  image_index = 3;
 }
 
 //Screen wrapping (manual)
